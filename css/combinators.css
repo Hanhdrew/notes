@@ -1,0 +1,5 @@
+p#selector-one.selector-two[data-type="selector-three"] {
+  color: magenta;
+}
+
+/* chained selectors  */

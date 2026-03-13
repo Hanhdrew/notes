@@ -1,0 +1,81 @@
+li::marker {
+  color: red;
+  content: "\2192";
+}
+
+/* for things like listed items */
+
+input::placeholder {
+  color: green;
+  background-color: black;
+}
+
+/* another way of placeholder text */
+
+h2::selection {
+  color: purple;
+}
+
+/* for items users interact with */
+
+/* ::selection {
+	color: purple
+}
+
+same thing but as a global selector */
+
+p::before {
+  content: "Stuff";
+  color: orange;
+}
+
+p::after {
+  content: "More stuff?";
+  color: blue;
+}
+
+.quoted::before {
+  content: "\201D";
+  color: red;
+}
+
+a:visited {
+  color: pink;
+}
+
+a:active {
+  color: red;
+}
+
+a:hover {
+  color: purple;
+}
+
+/* order does matter for these pseudo classes */
+
+li:first-of-type {
+  color: magenta;
+}
+
+li:last-of-type {
+  color: saddlebrown;
+}
+
+li:nth-of-type(4) {
+  color: crimson;
+}
+
+/* numeric position of whats selected  */
+
+/* li:nth-of-type(2n + 1) {
+	green;
+} 
+	can be notational values*/
+
+li:nth-child(1 of li.special) {
+  background-color: blue;
+}
+
+ul:has(.special) {
+  text-decoration: underline;
+}

@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 200svh;
+  width: 100%;
+  background-color: #000;
+}
+
+.box-one {
+  height: 100px;
+  width: 300px;
+  background-color: red;
+}
+
+.box-two {
+  height: 100px;
+  width: 300px;
+  background-color: blue;
+}
+
+.position,
+.main {
+  background-color: beige;
+  height: 300px;
+  width: 300px;
+  border: 2px solid white;
+  position: relative;
+}
+
+/* positioned relative to nearest parent or html document will check if parent is positioned */
+.red {
+  background-color: red;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 20px;
+}
+
+/* relative to original position - still there  */
+.green {
+  position: relative;
+  left: 40px;
+  background-color: green;
+  height: 30px;
+  width: 30px;
+}
+
+/* acts as absolute but in a fixed location */
+.blue {
+  background-color: blue;
+  position: fixed;
+  top: 30px;
+  height: 30px;
+  width: 30px;
+}
+/* acts as relative until it reaches constraint values */
+/* will act only within its parent container */
+.orange {
+  position: sticky;
+  top: 10px;
+  bottom: 10px;
+  background-color: orange;
+  height: 30px;
+  width: 30px;
+}
+
+/* default is static */
+.pink {
+  background-color: pink;
+  position: static;
+  height: 30px;
+  width: 30px;
+}

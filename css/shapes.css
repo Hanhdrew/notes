@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100svh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.rect-ver {
+  height: 140px;
+  width: 70px;
+  border: 1px solid black;
+}
+
+.rect-hor {
+  height: 70px;
+  width: 140px;
+  border: 1px solid black;
+  background-image: url(https://picsum.photos/seed/picsum/200/300);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* contain = makes whole image inside cover is 100% */
+
+/* background has shorthand properties */
+.square {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  background: url() left/cover repeat-y;
+}
+
+.oval-hor {
+  height: 80px;
+  width: 80px;
+  border: 2px solid black;
+}
+
+/* you can stack gradients */
+.oval-ver {
+  height: 80px;
+  width: 80px;
+  background-image: linear-gradient(135deg, black 0%, grey 30%, white 100%);
+  border-radius: 50%;
+}

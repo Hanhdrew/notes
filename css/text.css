@@ -1,0 +1,29 @@
+body {
+  font-variant: small-caps;
+  font-stretch: expanded;
+}
+
+p:nth-child(odd) {
+  color: red;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-shadow: 0 0 5px black;
+  text-align: center;
+  letter-spacing: normal;
+  line-height: 10px;
+}
+
+.preformatted {
+  white-space: pre;
+  /* pre-wrap will allow it to pre and wrap */
+  border: 2px solid black;
+}
+
+/* pre and white-space for formatting  */
+
+span {
+  font-size: 30px;
+  color: blue;
+  background-color: aqua;
+  text-shadow: 0 0 10px black;
+}
