@@ -64,3 +64,53 @@ while (jar < 100) {
 }
 
 //for of loop
+
+//for of loops use cases
+
+const shoes = ["Nike SBs", "Emericas", "Supras", "Vans"];
+
+//traditional for loop
+for (let i = 0; i < shoes.length; i++) {
+  console.log(shoes[i]);
+}
+
+//forEach still works but if you want to break; or continue; you get a syntax error
+shoes.forEach((shoe) => {
+  return console.log(shoe);
+});
+
+//example using for in loop gives back an index. can also break or continue the loop.
+//it works but can get unexpected behavior from array.prototype and inherited properties
+//for in loops iterates over keys (property names)
+//best on objects / object properties
+//will return object keys in indexed position ie: [0][2][3]
+for (const index in shoes) {
+  console.log(shoes[index]);
+}
+
+//for of iterates over values - any iterable such as arrays strings maps sets
+for (const shoe of shoes) {
+  console.log(shoes);
+}
+
+//more for of loop examples
+
+console.log(shoes.entries()); //returns array Iterator
+//itll give you a function back that allows you to manually iterate through the array
+//you can call that function .next() which will return object one by one with your index
+
+//another way to get value and index is by returning the index position ie:
+
+//for (const shoe of shoes.enteries()) {
+//console.log(shoe[0], shoe[1])};
+
+//you can destructure as well ex:
+
+//for (const [i, shoe] of shoes.entries()) {
+//console.log(`${shoe} is the ${i} index)};
+
+function addTotal() {
+  console.log(arguments); //keyword arguments is only functional to named function not arrow function
+}
+
+addTotal(12, 23, 45, 56);
