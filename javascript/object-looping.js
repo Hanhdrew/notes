@@ -46,3 +46,43 @@ const person = {
 //comes from global Object model
 
 const keys = Object.keys(person);
+
+//for of loops with objects
+
+const skater = {
+  name: "Andrew",
+  stance: "Goofy",
+  fractures: 5,
+  bonesBroken: 0,
+  ankleInjuries: 50,
+};
+
+//type error - skater object not iterable
+
+// for (const prop of skater) {
+//   console.log(prop);
+// }
+
+//this will work by using the Object prototype and will give you keys
+//prop, skater[prop] will give you values
+//also kind of sketchy
+
+for (const prop of Object.keys(skater)) {
+  console.log(prop, skater[prop]);
+}
+
+//two methods for iterating object effectively - Object.values() - Object.entries()
+
+for (const prop of Object.values(skater)) {
+  console.log(prop);
+}
+
+for (const prop of Object.entries(skater)) {
+  console.log(prop);
+}
+
+//can also destructure this
+
+for (const [prop, value] of Object.entries(skater)) {
+  console.log([prop, value]);
+}

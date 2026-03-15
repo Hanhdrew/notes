@@ -126,9 +126,22 @@ const starStudents = newClassRoom.students
         arr: array,
       };
     },
-    { sum: 0, arr: [] }
+    { sum: 0, arr: [] },
   );
 
 var studentAverage = starStudents.sum / starStudents.arr.length;
 
 console.log(starStudents, studentAverage);
+
+//more es6 array methods - Array.from() - Array.of()
+//what this does is turns an iterable into an array
+
+//these two array methods do NOT exist on the array prototype
+//to expand on this: every array method you create inherits methods from the array.prototype
+//ie: arr.map(), arr.filter(), arr.reduce() etc.
+//these are called instance methods - they belong to arrays after you create them.
+//Array.from() and Array.of() exist on the constructor itself
+//they are an Array class not an array instance
+//this is the key difference: prototype methods operate on existing arrays, static methods create something new entirely
+
+const shoes = ["Nike SB", "Emericas", "Supra", "Vans"];

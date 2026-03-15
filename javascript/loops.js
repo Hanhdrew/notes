@@ -132,6 +132,12 @@ for (const char of name) {
 
 const div = document.querySelectorAll("div");
 
-c;
-
 console.log(div);
+
+for (const d of div) {
+  d.addEventListener("click", function () {
+    console.log("hey");
+  });
+}
+
+//event listener on all divs
