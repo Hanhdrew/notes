@@ -33,3 +33,16 @@ for (const key of Object.keys(devslopesDiner)) {
 //objects are technically not iterable thing just for storing key value pairs
 
 //Object.entries(), Object.values() - other ways to iterate
+
+const person = {
+  id: 252,
+  username: "dcode",
+  age: 32,
+  hobbies: ["Software Dev", "Gardening"],
+  active: true,
+};
+
+//Object.keys() is a function that gives you an array of all keys in your object
+//comes from global Object model
+
+const keys = Object.keys(person);

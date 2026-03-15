@@ -110,7 +110,28 @@ console.log(shoes.entries()); //returns array Iterator
 //console.log(`${shoe} is the ${i} index)};
 
 function addTotal() {
-  console.log(arguments); //keyword arguments is only functional to named function not arrow function
+  let total = 0;
+  for (const num of arguments) {
+    total += num;
+  }
+  console.log(total); //keyword arguments is only functional to named function not arrow function
+  return total;
 }
 
 addTotal(12, 23, 45, 56);
+
+const name = "Hanhdrew";
+
+for (const char of name) {
+  console.log(char);
+}
+
+//works on name because its an iterable
+
+//you can iterate through html elements too (ex: notational div tags)
+
+const div = document.querySelectorAll("div");
+
+c;
+
+console.log(div);
