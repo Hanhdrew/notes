@@ -86,7 +86,8 @@ console.log(scoreTotal);
 
 // array.find(); vs array.filter();
 
-// const originalNumbers = [1, 2, 3, 4, 5];
+const originalNumbers = [1, 2, 3, 4, 5];
+
 // let doubledNumbers = [];
 // for (let number of originalNumbers) {
 //   doubledNumbers.push(number * 2);
@@ -140,8 +141,75 @@ console.log(starStudents, studentAverage);
 //to expand on this: every array method you create inherits methods from the array.prototype
 //ie: arr.map(), arr.filter(), arr.reduce() etc.
 //these are called instance methods - they belong to arrays after you create them.
-//Array.from() and Array.of() exist on the constructor itself
+//Array.from() and Array.of() exist on the constructor itself and are static methods
 //they are an Array class not an array instance
 //this is the key difference: prototype methods operate on existing arrays, static methods create something new entirely
 
+//array.from() takes an iterable and turns it into a true array
+
 const shoes = ["Nike SB", "Emericas", "Supra", "Vans"];
+
+const fake = "const headers = document.querySelectorAll(h5)"; //notionally grabbing header 5 tags - creates an array-like structure but not a true array
+
+headers.map((node) => console.log(node.textContent)); //wont work because .map() wont work an an array-like
+
+//fix:
+
+const headersArray = Array.from(headers, (node) =>
+  console.log(node.textContent),
+); //array.from() can take two arguments one for the input another for a mapping function ie: arr.map()
+
+function addTotal() {
+  const numbers = Array.from(arguments);
+  return numbers.reduce((prev, next) => prev + next, 0);
+}
+
+const total = addTotal(12, 34, 45, 56, 68);
+
+console.log(total);
+
+const nums = Array.of(23, 5, 64, 65); //creates an array from arguments
+
+console.log(nums);
+
+//more arrays:
+//Array.find() and Array.findIndex()
+
+const comments = [
+  {
+    id: 1,
+    comment: "I love to code.",
+    likes: 102,
+    user: "jradness",
+  },
+  {
+    id: 2,
+    comment: "Something something.",
+    likes: 12,
+    user: "joemom",
+  },
+  {
+    id: 3,
+    comment: "Hello, world.",
+    likes: 10,
+    user: "Mike",
+  },
+  {
+    id: 4,
+    comment: "I was watching a movie.",
+    likes: 1042,
+    user: "Mrcoolguy",
+  },
+];
+
+//you could directly access the property like comments[4].id but you dont always know it so you can use the .find() method
+//.find() is a callback method that returns a boolean => loops array , creates boolean, and stores in an object
+
+const id = 3;
+const comment = comments.find((item) => item.id === id); //youll get full object with id === 3. can be any property on the object
+
+console.log(comment);
+
+//array.findIndex() finds index , helpful for slicing out of an array
+
+const commentIndex = comments.findIndex((item) => item.id === id);
