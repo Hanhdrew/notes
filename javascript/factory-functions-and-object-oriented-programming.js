@@ -69,3 +69,17 @@ const rest1 = new Restaurant("Devslopes Diner", "American", 4.5);
 //js considers Restaurant function to be special
 
 //The prototype Chain - the connection between constructor function and objects it creates
+//allows us to store information thats accessible elsewhere
+//instead of creating getRating function inside each object well attach it to prototype chain
+
+//prototype chain is just a property of the object - can add functions / methods to this object
+
+Restaurant.prototype.getRating = function () {
+  return `${this.name} has a rating of ${this.rating}`;
+};
+
+//even though the constructor has no getRating function because its added to the chain its still accessible
+
+const rest2 = new Restaurant("Pizza place", "Italian", 3);
+
+console.log(rest2.getRating());
