@@ -1,5 +1,8 @@
 //quick recap
 
+//javascript classes are a wrapper, grouping mechanism, prototype generator, constructor function generator, and inheritence mechanism
+//under the hood its just the constructor function and prototype object
+
 function Restaurant(name, cuisine, rating) {
   //constructor function
   this.name = name; //this refers to objects it creates
