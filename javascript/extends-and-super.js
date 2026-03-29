@@ -25,19 +25,27 @@ class Circle {
 
 //what happens when two classes overlap?
 //for example Circle and Sphere
-//solution is EXTEND (extension of a class) keyword extend
+//solution is EXTENDS (extension of a class) keyword extend
 // - gives options to add or overwrite properties
+// - use terms parent and child to determine who came first
+// - use super keyword to call constructor function before adding any additional properties
 
 //will have to add extends keyword
 // - still requires a constructor
-//
 class Sphere extends Circle {
   //we can add more arguments (nicknames)
   //we can also add the original constructor function
   constructor(radius, color, nicknames) {
     //super keyword invokes the constructor function of whatever were extending
+    // - use super keyword to call parent constructor BEFORE adding extended properties
+    // - not using super gives you an error
+    // - you have to define what to do with the previous constructor
     super(radius, color);
     this.nicknames = nicknames;
+  }
+  //method talk: can still add static and instance methods
+  getVolume() {
+    return (4 / 3) * Math.PI * this.radius ** 3;
   }
 }
 
