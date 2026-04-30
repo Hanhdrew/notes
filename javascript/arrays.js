@@ -213,3 +213,9 @@ console.log(comment);
 //array.findIndex() finds index , helpful for slicing out of an array
 
 const commentIndex = comments.findIndex((item) => item.id === id);
+
+//Sets:
+
+//Set() - is a unique array that only stores unique values. it includes strings, numbers, objects, arrays, and functions
+// - while arrays are great they allow duplicates
+// - also using methods like includes are slow for large data sets
