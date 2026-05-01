@@ -214,12 +214,6 @@ console.log(comment);
 
 const commentIndex = comments.findIndex((item) => item.id === id);
 
-//Sets:
-
-//Set() - is a unique array that only stores unique values. it includes strings, numbers, objects, arrays, and functions
-// - while arrays are great they allow duplicates
-// - also using methods like includes are slow for large data sets
-
 // 📚 Array Methods
 // Creation / Inspection
 // .length — Returns the number of elements in the array.

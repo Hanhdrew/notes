@@ -70,3 +70,35 @@ console.log(myCircle.calcArea());
 // - it does not need .this in order to function or an instance
 // - communicate intent
 // - used for factories, utilities and class level operations
+
+//Sets:
+
+//Set() - is a built in constructor function
+// - acts like a unique array that only stores unique values. it includes strings, numbers, objects, arrays, and functions
+// - while arrays are great they allow duplicates
+// - also using methods like includes are slow for large data sets
+// - also not index based
+
+const carNames = new Set();
+
+carNames.add("Acura NSX");
+carNames.add("Honda CRV");
+carNames.add("Cevy Impalla");
+
+//set methods:
+
+//carNames.keys (set iterator can use next())
+//carNames.entries (set iterator can use next())
+//carNames.values (set iterator can use next())
+// - keys and values are the same thing
+//carNames.add (adds items)
+//carNames.delete (delete items)
+//carNames.clear (clears the array)
+//carNames.has("whatever") lets you search
+// - you dont have to loop or map through it
+// - can loop through iterables
+
+console.log(carNames);
+console.log(carNames.size);
+
+//logs set(3)
