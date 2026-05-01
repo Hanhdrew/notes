@@ -219,3 +219,49 @@ const commentIndex = comments.findIndex((item) => item.id === id);
 //Set() - is a unique array that only stores unique values. it includes strings, numbers, objects, arrays, and functions
 // - while arrays are great they allow duplicates
 // - also using methods like includes are slow for large data sets
+
+// 📚 Array Methods
+// Creation / Inspection
+// .length — Returns the number of elements in the array.
+
+// Array.isArray(x) — Checks if a value is an array.
+
+// Non‑mutating (return new array)
+// .map(fn) — Returns a new array where each element is transformed by the callback.
+
+// .filter(fn) — Returns a new array containing only elements that pass the callback test.
+
+// .slice(start, end) — Returns a shallow copy of part of the array.
+
+// .concat(arr) — Returns a new array combining the original and the argument.
+
+// .flat(depth) — Flattens nested arrays up to the given depth.
+
+// .find(fn) — Returns the first element that matches the callback test.
+
+// .findIndex(fn) — Returns the index of the first matching element.
+
+// .reduce(fn, init) — Accumulates values into a single result.
+
+// .includes(x) — Checks if the array contains the given value.
+
+// .indexOf(x) — Returns the index of the first match or -1.
+
+// .join(sep) — Returns a string by joining elements with the separator.
+
+// Mutating (change the original array)
+// .push(x) — Adds to the end and returns the new length.
+
+// .pop() — Removes and returns the last element.
+
+// .shift() — Removes and returns the first element.
+
+// .unshift(x) — Adds to the start and returns the new length.
+
+// .splice(start, count, ...items) — Removes/replaces/adds elements in place.
+
+// .sort(fn) — Sorts the array in place.
+
+// .reverse() — Reverses the array in place.
+
+// .fill(value) — Fills the array with a value from start to end.

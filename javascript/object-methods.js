@@ -19,7 +19,7 @@ console.log("Object.values", Object.values(devslopesDiner)); //takes object and 
 console.log("Object.entries", Object.entries(devslopesDiner)); //takes object and returns an array of arrays containing the key value pair and value
 console.log(
   "has own property, cuisine:",
-  devslopesDiner.hasOwnProperty("cuisine")
+  devslopesDiner.hasOwnProperty("cuisine"),
 ); //to check if a key exists
 
 //creating our own object methods:
@@ -31,7 +31,7 @@ console.log(
 //printAd is the key
 devslopesDiner.printAd = function () {
   console.log(
-    `Welcome to the ${devslopesDiner.name}! We serve ${devslopesDiner.cuisine} food and are located at ${devslopesDiner.address}. Come visit us!`
+    `Welcome to the ${devslopesDiner.name}! We serve ${devslopesDiner.cuisine} food and are located at ${devslopesDiner.address}. Come visit us!`,
   );
 };
 
@@ -58,3 +58,26 @@ Object.keys(devslopesDiner);
 devslopesDiner.hasOwnProperty("founded");
 
 //you can make your own
+
+// 🧱 Object Methods
+// Object.keys(obj) — Returns an array of the object's own keys.
+
+// Object.values(obj) — Returns an array of the object's own values.
+
+// Object.entries(obj) — Returns an array of [key, value] pairs.
+
+// Object.fromEntries(arr) — Converts [key, value] pairs back into an object.
+
+// Object.assign(target, source) — Copies properties from source into target.
+
+// Object.hasOwn(obj, key) — Checks if the object has the key directly.
+
+// Object.freeze(obj) — Prevents any changes to the object.
+
+// Object.seal(obj) — Prevents adding/removing properties but allows editing existing ones.
+
+// Object.create(proto) — Creates a new object with the given prototype.
+
+// Object.getPrototypeOf(obj) — Returns the object's prototype.
+
+// Object.setPrototypeOf(obj, proto) — Sets the object's prototype.

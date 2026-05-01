@@ -74,3 +74,31 @@ var myPassport =
   " My address is " +
   streetAddress;
 console.log(myPassport);
+
+// .length — Returns the number of characters in the string.
+
+// .toLowerCase() — Returns a lowercase version of the string.
+
+// .toUpperCase() — Returns an uppercase version of the string.
+
+// .includes(sub) — Checks whether the string contains the given substring.
+
+// .indexOf(sub) — Returns the index of the first match or -1 if not found.
+
+// .slice(start, end) — Returns a substring from start to end (non‑inclusive).
+
+// .trim() — Removes whitespace from both ends of the string.
+
+// .replace(a, b) — Returns a new string with the first match replaced.
+
+// .replaceAll(a, b) — Returns a new string with all matches replaced.
+
+// .split(delimiter) — Converts the string into an array using the delimiter.
+
+// .startsWith(sub) — Checks if the string begins with the given substring.
+
+// .endsWith(sub) — Checks if the string ends with the given substring.
+
+// .charAt(i) — Returns the character at the given index.
+
+// .repeat(n) — Returns the string repeated n times.
