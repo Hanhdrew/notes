@@ -78,6 +78,8 @@ console.log(myCircle.calcArea());
 // - while arrays are great they allow duplicates
 // - also using methods like includes are slow for large data sets
 // - also not index based
+// - you can pass an iterable into a Set() to add value
+// - ex: const newSet = new Set(["iterable"]);
 
 const carNames = new Set();
 
@@ -102,3 +104,32 @@ console.log(carNames);
 console.log(carNames.size);
 
 //logs set(3)
+
+//Set example:
+
+const competitors = new Set();
+
+competitors.add("Chris");
+competitors.add("John");
+competitors.add("Mike");
+
+const competed = competitors.values();
+// - turned this into a set iterable
+
+competed.next();
+// - you can iterate through it individually
+// - it removes one at a time from set iterator
+
+// WeakSet() notes:
+
+// WeakSet() - is a special set that can only store objects. those objects are held weakly meaning if nothing references them anymore theyll be deleted
+// - you cannot loop this
+// - no .clear method
+// - is garbage collected
+
+let personOne = { id: 1, name: "bob" };
+let personTwo = { id: 2, name: "girl" };
+let personThree = { id: 3, name: "joe" };
+
+const weakPeople = new WeakSet([personOne, personTwo, personThree]);
+// - adding multiple via iterable (array)
