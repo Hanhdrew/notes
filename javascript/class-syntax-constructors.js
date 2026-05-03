@@ -149,3 +149,8 @@ people.set("Andrew", 1);
 // - must also be unique
 
 console.log(people.get("Andrew"));
+// - get is a way to get keys
+
+//two ways to loop over a map():
+// - first way is a forEach() loop
+// - for of loop
