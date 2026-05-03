@@ -71,7 +71,7 @@ console.log(myCircle.calcArea());
 // - communicate intent
 // - used for factories, utilities and class level operations
 
-//Sets:
+//Set() constructor:
 
 //Set() - is a built in constructor function
 // - acts like a unique array that only stores unique values. it includes strings, numbers, objects, arrays, and functions
@@ -120,7 +120,7 @@ competed.next();
 // - you can iterate through it individually
 // - it removes one at a time from set iterator
 
-// WeakSet() notes:
+// WeakSet() constructor notes:
 
 // WeakSet() - is a special set that can only store objects. those objects are held weakly meaning if nothing references them anymore theyll be deleted
 // - you cannot loop this
@@ -133,3 +133,19 @@ let personThree = { id: 3, name: "joe" };
 
 const weakPeople = new WeakSet([personOne, personTwo, personThree]);
 // - adding multiple via iterable (array)
+
+//Map() constructor notes:
+
+//Map() are similar to sets but its for objects
+
+const people = new Map();
+
+people.set("Andrew", 1);
+people.set("Andrew", 1);
+people.set("Andrew", 1);
+
+// - instead of .add() its .set()
+// - requires two values for argument: key and value
+// - must also be unique
+
+console.log(people.get("Andrew"));
