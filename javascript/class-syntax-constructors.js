@@ -147,6 +147,13 @@ people.set("Andrew", 1);
 // - instead of .add() its .set()
 // - requires two values for argument: key and value
 // - must also be unique
+// - keys can take any value its not restricted to strings like normal objects
+
+//ex: here we have an object with a object as the key
+
+// const someGuy = {
+//   {...}: "Hanhdrew"
+// }
 
 console.log(people.get("Andrew"));
 // - get is a way to get keys
@@ -154,3 +161,35 @@ console.log(people.get("Andrew"));
 //two ways to loop over a map():
 // - first way is a forEach() loop
 // - for of loop
+
+//ex using all of this in practice:
+// - being allowed to store objects as keys allows you to do things like track
+
+const totalClicks = new Map();
+
+const headers = document.querySelectorAll("h5");
+console.log(headers);
+
+headers.forEach((h5) => {
+  totalClicks.set(h5, 0);
+  h5.addEventListener("click", function () {
+    const count = totalClicks.get(this);
+    totalClicks.set(this, count + 1);
+    console.log(totalClicks);
+  });
+});
+
+//weakMap() notes:
+
+// - there is no size
+// - cannot loop
+// - empty means it will be garbage collected
+
+let bluePerson = { name: "blue" };
+let redPerson = { name: "red" };
+
+const newMap = new Map();
+const newWeakMap = new WeakMap();
+
+newMap.set(bluePerson, "Hello blue guy");
+newWeakMap.set(redPerson, "Hello red guy");

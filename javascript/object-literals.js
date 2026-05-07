@@ -3,6 +3,7 @@
 // they are composite datatypes - acts as a container that stores other data types
 // different than arrays by storing data in key value pairs
 // key value pairs are like mail - using keys
+// keys must also be a string at all times even if it doesnt have quotes
 // can be stored in a variable
 
 const andrewObject = {
