@@ -72,7 +72,7 @@ logUserInformation({
 //examples of type variables:
 
 let x: number = 5;
-let firstName: string = "andrew";
+let someName: string = "andrew";
 let isActive: boolean = true;
 
 //examples for function parameters:
@@ -132,7 +132,7 @@ interface ThirdUser {
 
 //assigning types to unions
 
-let id: number | string;
+let identification: number | string;
 
 //assigning types to generics:
 
