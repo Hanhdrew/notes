@@ -61,3 +61,81 @@ logUserInformation({
 //this also wouldnt work because youre not using the .info key normal js wouldnt wouldnt catch this
 
 //in real world application if a user tried to run this code their app would crash because javascript errors are caught at runtime / execution
+
+//Assigning a variable type in typescript:
+// - normally you dont need to because typescript and javascript will infer it
+// - infer means what the compiler assumes to be true of a value
+// ex - let x = 5; (5 meaning number instead of: let x: number = 5;) 5 is inferred as a number not string
+// pattern: let variableName: type = value;
+// - thing: Type
+
+//examples of type variables:
+
+let x: number = 5;
+let firstName: string = "andrew";
+let isActive: boolean = true;
+
+//examples for function parameters:
+
+function greetHere(name: string) {
+  console.log(`Hello, ${name}`);
+  //must pass in a string or typescript will not allow it
+}
+
+// * you can also assign types to function return values
+
+function add(a: number, b: number): number {
+  return a + b;
+  // as you can see the third :number represents the return value
+}
+
+//examples for object types:
+
+let thisUser: { name: string; age: number } = {
+  name: "andrew",
+  age: 25,
+};
+
+//assigning types to arrays:
+
+let theseNums: number[] = [1, 2, 3];
+let names: string[] = ["alex", "same"];
+
+// * generic form:
+
+let moreNums: Array<number> = [1, 2, 3];
+
+//assigning types to classes:
+
+class PersonClass {
+  name: string;
+  age: number;
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+//using type aliases (custom types)
+
+type AnotherUser = {
+  name: string;
+  age: number;
+};
+
+//using interfaces
+
+interface ThirdUser {
+  name: string;
+  age: number;
+}
+
+//assigning types to unions
+
+let id: number | string;
+
+//assigning types to generics:
+
+function wrap<T>(value: T): T {
+  return value;
+}
