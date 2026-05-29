@@ -1,4 +1,29 @@
 //looping over objects different than arrays and for loops because theyre made with keys unlike strings and arrays
+//OBJECTS ARE NOT ITERABLE BY DEFAULT
+//You must turn it into an iterable shape first:
+// - Object.entries()
+// - Object.values()
+// - Object.keys()
+// - each one turned into an array which is iterable
+// - you can deconstruct this and use array methods
+
+//example:
+
+const exampleObject = {
+  andrew: "handsome",
+  drew: "handsomer",
+  drewski: "handsome AND smart",
+};
+
+Object.enteries(exampleObject).reduce((acc, [key, value]) => {
+  return 0 + key + value;
+});
+
+//another:
+
+Object.entries(exampleObject).forEach(([key, value]) => {
+  console.log(key, value);
+});
 
 const devslopesDiner = {
   name: "Devslopes Diner", //string
