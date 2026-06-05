@@ -85,7 +85,7 @@ console.log(myPassport);
 
 // .indexOf(sub) — Returns the index of the first match or -1 if not found.
 
-// .slice(start, end) — Returns a substring from start to end (non‑inclusive).
+// .slice(startIndex, deleteCount, ...itemsToInsert) — Returns a substring from start to end (non‑inclusive).
 
 // .trim() — Removes whitespace from both ends of the string.
 
