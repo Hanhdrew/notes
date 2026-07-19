@@ -1,6 +1,7 @@
 //typescript vs javascript
 
 //at its core typescript is a superset of javascript
+// - typescript is basically javascript with type checking
 // - it is used for large code bases to solve problems javascript production has
 // - the main difference is typescript errors are caught at compiled time not runtime
 // - meaning errors are caught much sooner
@@ -139,3 +140,15 @@ let identification: number | string;
 function wrap<T>(value: T): T {
   return value;
 }
+
+//typescript is statically-typed
+// - static types are declared on the spot
+
+//javascript is dynamic-typed
+// - determined at runtime meaning it can change
+// - ex
+// let number = 10;
+// number = "a"
+// - in javascript thats fine but if you try to pass that into a function for example bad
+
+//
